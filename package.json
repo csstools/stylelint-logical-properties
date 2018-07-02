@@ -1,0 +1,71 @@
+{
+  "name": "stylelint-logical-properties",
+  "version": "1.0.0",
+  "description": "Detect and warn against the use of physical properties in CSS",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/stylelint-logical-properties",
+  "homepage": "https://github.com/jonathantneal/stylelint-logical-properties#readme",
+  "bugs": "https://github.com/jonathantneal/stylelint-logical-properties/issues",
+  "main": "index.cjs.js",
+  "module": "index.es.js",
+  "files": [
+    "index.cjs.js",
+    "index.es.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "test": "echo 'Running tests...'; npm run test:js && npm run test:tape",
+    "test:js": "eslint *.mjs --cache --ignore-path .gitignore --quiet",
+    "test:tape": "node --experimental-modules test.mjs"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "postcss-values-parser": "^1.5.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-dev": "^2.0.0",
+    "pre-commit": "^1.2.2",
+    "stylelint": "^9.3.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.0.0 || ^8.0.0 || ^9.0.0"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-plugin",
+    "logical",
+    "flow",
+    "relative",
+    "property",
+    "properties",
+    "values",
+    "ltr",
+    "rtl",
+    "dir",
+    "directions",
+    "directional",
+    "inline",
+    "block",
+    "start",
+    "end",
+    "align",
+    "border",
+    "clear",
+    "float",
+    "margin",
+    "padding",
+    "size",
+    "text"
+  ]
+}
